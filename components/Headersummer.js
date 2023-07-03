@@ -10,7 +10,7 @@ export default function Headersummer() {
     return (
         <>
             <div className=' relative h-96 flex items-center justify-center ' style={{ height: "100vh" }}>
-                <video className='pointer-events-none absolute top-0 left-0 w-full h-full overflow-hidden object-cover' controls autoplay muted lood playsInline preload='none'>
+                <video className='pointer-events-none absolute top-0 left-0 w-full h-full overflow-hidden object-cover' controls autoplay muted  playsInline preload='none'>
                     <source src='https://cdn.shopify.com/videos/c/vp/76d0a9910e8b4b0eb3c04a234a3f9566/76d0a9910e8b4b0eb3c04a234a3f9566.HD-1080p-7.2Mbps-11375089.mp4' type="video/mp4"></source>
                 </video>          
                     <div className='flex justify-between items-center absolute gap-10 top-10 container px-20 '>
