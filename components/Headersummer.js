@@ -28,7 +28,6 @@ export default function Headersummer() {
                                 <p>Contact</p>
                             </div>
                         </div>
-
                         <div className='flex gap-4 text-white'>
                             <AiOutlineSearch className='text-[28px]'></AiOutlineSearch>
                             <div className='flex flex-col items-center '>
