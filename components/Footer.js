@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
         <div className='p-10 flex gap-10 justify-center items-cente text-white bg-[#1C1917]'>
           <div className='w-[412px] mr-10'>
-            <img className='w-[110px]' src='https://demo.shopifyhydrogen.io/sanity/461aa05da169ce9b8d7598d5e0e9ade7aef795c1-1765x515.svg?width=1765&height=515&crop=center'></img>
+            <img alt='anh' className='w-[110px]' src='https://demo.shopifyhydrogen.io/sanity/461aa05da169ce9b8d7598d5e0e9ade7aef795c1-1765x515.svg'></img>
             <p className='text-base py-4 '></p>
             <div>
               <div className='flex items-center gap-2 py-2 '>
@@ -92,12 +92,12 @@ export default function Footer() {
           </div>
           <div className='list_foot w-[300px] flex flex-col gap-3 '>
             <h2 className='font-bold pb-5'>SUBSCRIBE</h2>
-            <div className='text-[16px]'>You'll also be the first to see our new arrivals, get early access to sales and more!</div>
+            <div className='text-[16px]'>You&apos;ll also be the first to see our new arrivals, get early access to sales and more!</div>
             <div className='opacity-100 flex flex-col justify-center md:flex-row relative newsletter-input'>
               <input placeholder='Your email address' className='border-0 py-3 w-full px-6 font-normal bg-white rounded-full text-black md:rounded-br-none md:rounded-tr-none'></input>
               <button className='bg-red-600 rounded-3xl h-12 md:rounded-bl-none md:rounded-tl-none w-full mt-4 md:mt-0 md:w-36'> JOIN</button>
             </div>
-            
+
             <div className='py-5'>
               <h2 className='font-bold pb-5'>COUNTRY</h2>
             </div>
@@ -105,7 +105,7 @@ export default function Footer() {
         </div>
         <div className='flex items-center justify-between py-4 px-10 bg-[#292524] h-[100px]'>
           <p className='text-white'>© 2023, Owen Demo Powered by shopifyhydrogen.io</p>
-          <img src='https://demo.shopifyhydrogen.io/sanity/5fce17daaede12e1470fae70393dbc47c22c1bc1-249x25.png?width=249&height=25&crop=center'></img>
+          <img src='https://demo.shopifyhydrogen.io/sanity/5fce17daaede12e1470fae70393dbc47c22c1bc1-249x25.png'></img>
         </div>
       </footer>
     </>
