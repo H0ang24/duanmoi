@@ -97,6 +97,7 @@ export default function Footer() {
               <input placeholder='Your email address' className='border-0 py-3 w-full px-6 font-normal bg-white rounded-full text-black md:rounded-br-none md:rounded-tr-none'></input>
               <button className='bg-red-600 rounded-3xl h-12 md:rounded-bl-none md:rounded-tl-none w-full mt-4 md:mt-0 md:w-36'> JOIN</button>
             </div>
+            
             <div className='py-5'>
               <h2 className='font-bold pb-5'>COUNTRY</h2>
             </div>

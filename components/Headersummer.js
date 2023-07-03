@@ -28,12 +28,11 @@ export default function Headersummer() {
                                 <p>Contact</p>
                             </div>
                         </div>
-                        
+
                         <div className='flex gap-4 text-white'>
                             <AiOutlineSearch className='text-[28px]'></AiOutlineSearch>
                             <div className='flex flex-col items-center '>
                                 <BiUser className='text-[28px] '></BiUser>
-
                             </div>
                             <div className='flex flex-col items-center '>
                                 <MdCompareArrows className='text-[28px]'></MdCompareArrows>
