@@ -5,6 +5,12 @@ import { BiUser } from 'react-icons/bi'
 import { MdCompareArrows } from 'react-icons/md'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { FiShoppingCart } from 'react-icons/fi'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import Product from './Product'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css';
 export default function Header() {
   return (
     <div className='w-full'>
@@ -54,31 +60,50 @@ export default function Header() {
               <div>+91333444555</div>
             </div>
           </div>
-            <div className='flex gap-4 text-white'>
-              <div className='flex flex-col items-center '>
-                <BiUser className='text-[34px] '></BiUser>
-                <p className='text-[10px]'>ACCOUNT</p>
-              </div>
-              <div className='flex flex-col items-center '>
-                <MdCompareArrows className='text-[34px]'></MdCompareArrows>
-                <p className='text-[10px]'>COMPARE</p>
-              </div>
-              <div className='flex flex-col items-center '>
-                <AiOutlineHeart className='text-[34px]'></AiOutlineHeart>
-                <p className='text-[10px]'>WISHLIST</p>
-              </div>
-              <div className='flex flex-col items-center relative '>
-                <FiShoppingCart className='text-[34px]'></FiShoppingCart>
-                <p className='text-[10px]'>CART</p>
-                <div className='bg-[#EF4444] absolute w-4 h-4 flex items-center justify-center right-[-5px] rounded-full text-[12px]'>0</div>
-              </div>
+          <div className='flex gap-4 text-white'>
+            <div className='flex flex-col items-center '>
+              <BiUser className='text-[34px] '></BiUser>
+              <p className='text-[10px]'>ACCOUNT</p>
             </div>
+            <div className='flex flex-col items-center '>
+              <MdCompareArrows className='text-[34px]'></MdCompareArrows>
+              <p className='text-[10px]'>COMPARE</p>
+            </div>
+            <div className='flex flex-col items-center '>
+              <AiOutlineHeart className='text-[34px]'></AiOutlineHeart>
+              <p className='text-[10px]'>WISHLIST</p>
+            </div>
+            <div className='flex flex-col items-center relative '>
+              <FiShoppingCart className='text-[34px]'></FiShoppingCart>
+              <p className='text-[10px]'>CART</p>
+              <div className='bg-[#EF4444] absolute w-4 h-4 flex items-center justify-center right-[-5px] rounded-full text-[12px]'>0</div>
+            </div>
+          </div>
         </div>
       </div>
       <div className='bg-[#0F172A]  w-full  flex justify-center items-center '>
         <div className=' h-12 flex justify-between items-center gap-10'></div></div>
-      
+      <div className='p-10'>
+
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          autoplay={{ delay: 1000 }}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide><img src='https://demo.shopifyhydrogen.io/sanity/21d0b937a7814588201a92a0e7f0ec5cbf62ba92-1920x800.webp?width=1920&height=800&crop=center'></img></SwiperSlide>
+          <SwiperSlide><img src='https://demo.shopifyhydrogen.io/sanity/697afa725e00d00e2b17bd6882f0ce61a35c93d7-1920x874.webp?width=1920&height=874&crop=center'></img></SwiperSlide>
+
+          ...
+        </Swiper>
+      </div>
+
+     
     </div>
 
   )
 }
+
