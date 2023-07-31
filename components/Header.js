@@ -2,15 +2,10 @@ import React from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { AiOutlinePhone } from 'react-icons/ai'
 import { BiUser } from 'react-icons/bi'
-import { MdCompareArrows } from 'react-icons/md'
+import { BsArrowLeftRight } from 'react-icons/bs'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { FiShoppingCart } from 'react-icons/fi'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-import Product from './Product'
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css';
+
 export default function Header() {
   return (
     <div className='w-full'>
@@ -66,7 +61,7 @@ export default function Header() {
               <p className='text-[10px]'>ACCOUNT</p>
             </div>
             <div className='flex flex-col items-center '>
-              <MdCompareArrows className='text-[34px]'></MdCompareArrows>
+              <BsArrowLeftRight className='text-[34px]'></BsArrowLeftRight>
               <p className='text-[10px]'>COMPARE</p>
             </div>
             <div className='flex flex-col items-center '>
@@ -85,7 +80,7 @@ export default function Header() {
         <div className=' h-12 flex justify-between items-center gap-10'></div></div>
       <div className='p-10'>
 
-        <Swiper
+        {/* <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={1}
@@ -98,7 +93,7 @@ export default function Header() {
           <SwiperSlide><img src='https://demo.shopifyhydrogen.io/sanity/697afa725e00d00e2b17bd6882f0ce61a35c93d7-1920x874.webp?width=1920&height=874&crop=center'></img></SwiperSlide>
 
           ...
-        </Swiper>
+        </Swiper> */}
       </div>
 
      
