@@ -84,17 +84,17 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
         <div className="flex flex-col gap-10" >
           <div className="flex flex-col gap-5">
             <p className="font-bold">PRODUCTS DETAILS</p>
-            <ul className="flex flex-col gap-2">
-              <li>Soft leather upper for a premium look</li>
-              <li>High-cushion molded sockliner</li>
-              <li>EVA midsole for cushioned comfort</li>
-              <li>Classic lace-up design</li>
-              <li>High abrasion rubber outsole for traction</li>
-              <li>Retro running-inspired sneaker</li>
-              <li>The Reebok Classic Leather is imported.</li>
+            <ul className="flex flex-col gap-2 list-disc before:text-red-500">
+              <li className="before:text-red-500">Soft leather upper for a premium look</li>
+              <li className="before:text-red-500">High-cushion molded sockliner</li>
+              <li className="before:text-red-500">EVA midsole for cushioned comfort</li>
+              <li className="before:text-red-500">Classic lace-up design</li>
+              <li className="before:text-red-500">High abrasion rubber outsole for traction</li>
+              <li className="before:text-red-500">Retro running-inspired sneaker</li>
+              <li className="before:text-red-500">The Reebok Classic Leather is imported.</li>
             </ul>
           </div>
-          <div className="">Always ready for the ride, the Men Reebok Classic Leather Casual Shoes bring a refined, timeless sportswear aesthetic to your everyday look. Bold color blocking, retro details and a reputation for timeless style after decades as a streetwear staple, the Reebok Classic Leather remains a must-have in any sneaker rotation.</div>
+          <div className="">Always ready for the ride, the {sanPhamTraVe.product.title} bring a refined, timeless sportswear aesthetic to your everyday look. Bold color blocking, retro details and a reputation for timeless style after decades as a streetwear staple, the Reebok Classic Leather remains a must-have in any sneaker rotation.</div>
         </div>
         <div></div>
         <div></div>

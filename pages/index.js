@@ -9,31 +9,31 @@ export default function Home({ sanPhamsTraVe }) {
 
 
   return (
-       
+
     <Layout >
       <div className="m-10">
-      <Swiper
+        <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={30}
           slidesPerView={4}
-          navigation          
+          navigation
           autoplay={{ delay: 1000 }}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
-      <div className=' p-10 container  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-      {sanPhamsTraVe.map((product) => {
-        return (
-          <SwiperSlide>
-          <Product product={product}></Product>
-          </SwiperSlide>
-          )
-      })}
-      </div>
-      </Swiper>
+          <div className=' p-10 container  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+            {sanPhamsTraVe.map((product, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <Product product={product}></Product>
+                </SwiperSlide>
+              )
+            })}
+          </div>
+        </Swiper>
       </div>
     </Layout>
-     
+
   )
 }
 
