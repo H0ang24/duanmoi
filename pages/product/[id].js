@@ -14,7 +14,7 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
   return sanPhamTraVe.product ? (
     <>
       <Header></Header>
-      <div>{sanPhamTraVe.product.title}</div>
+      
       <div className="flex container p-5 ">
         <div>
           <div className="grid grid-cols-2 px-10  w-full gap-[2px] ">
@@ -26,7 +26,7 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
         </div>
         <div className=" w-[40%] mx-10 flex flex-col gap-5 ">
           <p className="text-gray-500">Reebok</p>
-          <h1 className="font-bold text-heading whitespace-normal text-[30px]">Men's Reebok Classic <br></br> Leather Grow Casual Shoes</h1>
+          <h1 className="font-bold text-heading whitespace-normal text-[30px]">{sanPhamTraVe.product.title}</h1>
           <div className="flex items-center">
             <div className="flex">
               <AiFillStar></AiFillStar>
