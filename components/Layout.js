@@ -14,6 +14,8 @@ export default function Layout({ children }) {
   return (
     <>
       <Header></Header>
+      <div className='p-10'>
+
       <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
@@ -22,12 +24,13 @@ export default function Layout({ children }) {
           autoplay={{ delay: 1000 }}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
-        >
+          >
           <SwiperSlide><img src='https://demo.shopifyhydrogen.io/sanity/21d0b937a7814588201a92a0e7f0ec5cbf62ba92-1920x800.webp?width=1920&height=800&crop=center'></img></SwiperSlide>
           <SwiperSlide><img src='https://demo.shopifyhydrogen.io/sanity/697afa725e00d00e2b17bd6882f0ce61a35c93d7-1920x874.webp?width=1920&height=874&crop=center'></img></SwiperSlide>
 
           ...
         </Swiper>
+          </div>
       <main>{children}</main>     
       <Footer></Footer>
     </>

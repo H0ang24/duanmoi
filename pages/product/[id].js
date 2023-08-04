@@ -17,6 +17,8 @@ import "swiper/css/pagination";
 import "swiper/css";
 //JSX
 export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
+  console.log(sanPhamTraVe);
+  console.log(sanPhamsTraVe);
   return sanPhamTraVe.product ? (
     <>
       <Header></Header>
@@ -24,22 +26,12 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
       <div className="flex container p-5 ">
         <div>
           <div className="grid grid-cols-2 px-10  w-full gap-[2px] ">
+            (sanPhamTraVe.map)
             <img
               className=" border rounded"
               src={sanPhamTraVe.product.images[0].src}
             ></img>
-            <img
-              className=" border rounded"
-              src={sanPhamTraVe.product.images[0].src}
-            ></img>
-            <img
-              className=" border rounded"
-              src={sanPhamTraVe.product.images[0].src}
-            ></img>
-            <img
-              className=" border rounded"
-              src={sanPhamTraVe.product.images[0].src}
-            ></img>
+           
           </div>
         </div>
         <div className=" h-[480px] w-[40%] ">
@@ -111,39 +103,40 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-5">
             <p className="font-bold">PRODUCTS DETAILS</p>
-            <ul className="flex flex-col gap-2 list-disc">
-              <li className="">
-                Soft leather upper for a premium look
-              </li>
-              <li className=">
-                High-cushion molded sockliner
-              </li>
-              <li className=">
-                EVA midsole for cushioned comfort
-              </li>
-              <li className=">Classic lace-up design</li>
-              <li className=">
-                High abrasion rubber outsole for traction
-              </li>
-              <li className=">
-                Retro running-inspired sneaker
-              </li>
-              <li className=">
-                The Reebok Classic Leather is imported.
-              </li>
-            </ul>
-          </div>
-          <div className="">
-            Always ready for the ride, the {sanPhamTraVe.product.title} bring a
-            refined, timeless sportswear aesthetic to your everyday look. Bold
-            color blocking, retro details and a reputation for timeless style
-            after decades as a streetwear staple, the Reebok Classic Leather
-            remains a must-have in any sneaker rotation.
+            <div
+              className="list-disc"
+              dangerouslySetInnerHTML={{
+                __html: sanPhamTraVe.product.body_html,
+              }}
+            ></div>
           </div>
         </div>
         <div></div>
         <div></div>
       </div>
+
+      {/* <div className="m-10">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={30}
+          slidesPerView={4}
+          navigation
+          autoplay={{ delay: 1000 }}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <div className=' p-10 container  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+            {sanPhamsTraVe.map((product, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <Product product={product}></Product>
+                </SwiperSlide>
+              )
+            })}
+          </div>
+        </Swiper>
+      </div> */}
+
       <Footer></Footer>
     </>
   ) : (
@@ -166,6 +159,24 @@ export const getServerSideProps = async (context) => {
       },
     }
   );
+
+
   const responseJson = await response.json();
-  return { props: { sanPhamTraVe: responseJson } };
+  return {
+    props: { sanPhamTraVe: responseJson},
+  };
 };
+
+// export const getStaticProps = async () => {
+//   const response = await fetch(
+//     "https://panofrontendstore.myshopify.com/admin/api/2023-07/products.json",
+//     {
+//       headers: {
+//         "X-Shopify-Access-Token": "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",
+//       },
+//     }
+//   );
+//   const responseJson = await response.json();
+//   console.log(responseJson.products)
+//   return { props: { sanPhamsTraVe: responseJson.products } };
+// };
