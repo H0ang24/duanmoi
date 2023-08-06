@@ -35,14 +35,13 @@ export default function Header() {
         </button>
       </div>
       <div className=" bg-[#1E293B]  w-full  flex justify-center items-center ">
-        <div className="  h-24 flex justify-between items-center gap-10 ">
-         
+        <div className="  h-24 flex justify-between items-center gap-10 px-12 ">
+         <Link href={"/"}>
             <img
-              className="w-[110px]"
+              className="w-[160px]"
               src="https://demo.shopifyhydrogen.io/sanity/461aa05da169ce9b8d7598d5e0e9ade7aef795c1-1765x515.svg?width=1765&height=515&crop=center"
-            ></img>
-     
-
+              ></img>
+              </Link>
           <div className="w-full relative flex items-center gap-8 text-black">
             <div className="flex items-center gap-8 w-[850px]">
               <input

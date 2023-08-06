@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Product from "../../components/Product";
@@ -17,29 +17,61 @@ import "swiper/css/pagination";
 import "swiper/css";
 //JSX
 export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
-  console.log(sanPhamTraVe);
-  console.log(sanPhamsTraVe);
+  console.log(
+    sanPhamTraVe.product.variants[0].compare_at_price,
+    sanPhamTraVe.product.variants[0].price
+  );
+
+  const giamGia =
+    (sanPhamTraVe.product.variants[0].compare_at_price ??
+      sanPhamTraVe.product.variants[0].price) -
+    sanPhamTraVe.product.variants[0].price;
+
+  const [addtobag, setaddtobag] = useState(false);
+  const themVaoGioHang = (sanPhamTraVe) => {
+    const gioHang = localStorage.getItem("giohang");
+    //Trong trường hợp chưa có giỏ hàng
+    if (!gioHang) {
+      //Tạo giỏ hàng và lưu  vào một mảng có phẩn tử  là sản phẩm
+      localStorage.setItem("giohang", JSON.stringify([sanPhamTraVe]));
+    }
+    //Đã có giỏ hàng
+    else {
+      // Lấy giỏ hàng dạng string
+      const gioHangCuString = localStorage.getItem("giohang");
+      //Đổi giỏ hàng dạng string về dạng mảng
+      const gioHangCuJson = JSON.parse(gioHangCuString);
+      //Push sản phẩm được  click vào giỏ hàng cũ
+      gioHangCuJson.push(sanPhamTraVe);
+      //Lưu giỏ hàng  mới sau khi push sản phẩm vào LocalStorage
+      localStorage.setItem("giohang", JSON.stringify(gioHangCuJson));
+    }
+  };
+
   return sanPhamTraVe.product ? (
     <>
       <Header></Header>
 
-      <div className="flex container p-5 ">
+      <div className="flex container p-5 w-full mx-auto">
         <div>
           <div className="grid grid-cols-2 px-10  w-full gap-[2px] ">
-            (sanPhamTraVe.map)
-            <img
-              className=" border rounded"
-              src={sanPhamTraVe.product.images[0].src}
-            ></img>
-           
+            {sanPhamTraVe.product.images.map((image, index) => {
+              return (
+                <img
+                  key={index}
+                  className=" border rounded"
+                  src={image.src}
+                ></img>
+              );
+            })}
           </div>
         </div>
-        <div className=" h-[480px] w-[40%] ">
+        <div className=" h-[200px] w-[40%] ">
           <div
             className="  mx-10 flex flex-col gap-5  "
             style={{ position: "sticky", height: "5px", top: 0 }}
           >
-            <p className="text-gray-500">Reebok</p>
+            <p className="text-gray-500">{sanPhamTraVe.product.vendor}</p>
             <h1 className="font-bold text-heading whitespace-normal text-[30px]">
               {sanPhamTraVe.product.title}
             </h1>
@@ -54,14 +86,37 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
               <p>(0 reviews)</p>
             </div>
             <div className="flex gap-3">
-              <p className=" font-bold">
+              {sanPhamTraVe.product.variants[0].compare_at_price && (
+                <del className="text-gray-500 font-bold">
+                  {sanPhamTraVe.product.variants[0].compare_at_price}$
+                </del>
+              )}
+
+              <p className="text-black font-bold text-[20px]">
                 {sanPhamTraVe.product.variants[0].price}$
               </p>
-              <del className="text-gray-500 font-bold">
-                {sanPhamTraVe.product.variants[0].compare_at_price}$
-              </del>
             </div>
-            <button className="inline-block rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-full bg-black text-white">
+            <div className="h-[160px]">
+              <div>Color:</div>
+              <div>
+                <div className="aspect-[1/2] w-[110px]">
+                  <img src={sanPhamTraVe.product.images[0].src}></img>
+                </div>
+                <div>
+                  <img></img>
+                </div>
+                <div>
+                  <img></img>
+                </div>
+              </div>
+            </div>
+
+            <button
+              onClick={() => {
+                themVaoGioHang(sanPhamTraVe);
+              }}
+              className="inline-block rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-full bg-black text-white"
+            >
               Add to Bag
             </button>
             <button className="inline-block rounded font-medium text-center py-2 px-6 bg-primary text-contrast w-full bg-[#5A31F4] text-white">
@@ -99,7 +154,7 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
         </div>
       </div>
       <div className="m-10"></div>
-      <div className="px-36">
+      <div className="px-36 mx-auto w-full container">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-5">
             <p className="font-bold">PRODUCTS DETAILS</p>
@@ -160,10 +215,9 @@ export const getServerSideProps = async (context) => {
     }
   );
 
-
   const responseJson = await response.json();
   return {
-    props: { sanPhamTraVe: responseJson},
+    props: { sanPhamTraVe: responseJson },
   };
 };
 

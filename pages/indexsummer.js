@@ -17,7 +17,7 @@ export default function indexsummer({ sanPhamsTraVe }) {
   return (
     <>
       <Headersummer></Headersummer>
-      <div className=" md:grid-cols-3 lg:grid-cols-3 grid gap-4 md:gap-6 items-center p-10 container">
+      <div className=" md:grid-cols-3 lg:grid-cols-3 grid gap-4 md:gap-6 items-center p-10 container  mx-auto w-full">
         <div className="relative">
           <div>
             <img src="https://demo.shopifyhydrogen.io/sanity/d88ea04a8eb606d0a215a409aad56cecf650b4d7-450x450.webp?width=450&height=450&crop=center"></img>
@@ -76,37 +76,53 @@ export default function indexsummer({ sanPhamsTraVe }) {
           </div>
         </div>
       </div>
-      <div className="m-10">
-        <div className=" text-[24px] font-bold my-5 ">NEW ARRIVALS</div>
-        <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={4}
-          navigation
-          autoplay={{ delay: 1000 }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
-          <div className=" p-10 container  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {sanPhamsTraVe.map((product, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <Product product={product}></Product>
-                </SwiperSlide>
-              );
-            })}
+      <div className="p-10 container mx-auto w-full">
+        <div className="flex justify-between">
+          <div className=" text-[24px] font-bold my-5 ">NEW ARRIVALS</div>
+          <div className="py-1 flex gap-x-8 justify-center ">
+            <button>
+              <div className="border-b-2 border-black pb-1">Men</div>
+            </button>
+            <button>
+              <div className="border-b-2 border-black pb-1">Women</div>
+            </button>
+            <button>
+              {" "}
+              <div className="border-b-2 border-black pb-1">Accessories</div>
+            </button>
           </div>
-        </Swiper>
+        </div>
+        <div className="container mx-auto w-full">
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={4}
+            navigation
+            autoplay={{ delay: 1000 }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            <div className=" p-10 container  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {sanPhamsTraVe.map((product, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <Product product={product}></Product>
+                  </SwiperSlide>
+                );
+              })}
+            </div>
+          </Swiper>
+        </div>
         <div className="text-center mt-3 md:mt-12">
           <button className="inline-block font-medium px-10 py-3 border border-black text-black rounded-full">
             View More
           </button>
         </div>
       </div>
-      <div className="container p-10">
+      <div className="container p-10  mx-auto w-full">
         <img src="https://demo.shopifyhydrogen.io/sanity/bfab0e86c94a9e183c25ca3e6d5d93a0bb9b0129-1920x720.webp?width=600&height=225&crop=center"></img>
       </div>
-      <div className="m-10">
+      <div className="p-10 container mx-auto w-full">
         <div className="flex items-center justify-between">
           <div className=" text-[24px] font-bold my-5 ">SELECTED FOR YOU</div>
           <div className="underline">View All</div>
@@ -131,15 +147,18 @@ export default function indexsummer({ sanPhamsTraVe }) {
           </div>
         </Swiper>
       </div>
-      <div className="m-10">
+      <div className="p-10 container mx-auto w-full">
         <div className="flex items-center justify-between">
           <div className=" text-[24px] font-bold my-5 ">LATEST NEWS</div>
           <div className="underline">View All</div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           <div>
-            <div >
-            <img className="card-image bg-gray-300 aspect-[3/2]"  src="https://cdn.shopify.com/s/files/1/0673/5645/9319/articles/blog-img1_2.webp?v=1679026456&width=600&height=358&crop=center"></img>
+            <div>
+              <img
+                className="card-image bg-gray-300 aspect-[3/2]"
+                src="https://cdn.shopify.com/s/files/1/0673/5645/9319/articles/blog-img1_2.webp?v=1679026456&width=600&height=358&crop=center"
+              ></img>
             </div>
             <div className="flex gap-2 mt-4 text-sm font-normal text-gray-600">
               <p>Demo Owen v1 Admin</p>
@@ -158,8 +177,7 @@ export default function indexsummer({ sanPhamsTraVe }) {
           </div>
           <div>
             <div className="card-image bg-gray-300 aspect-[3/2]">
-
-            <img src="https://cdn.shopify.com/s/files/1/0673/5645/9319/articles/tennis-shoes-womens_2.webp?v=1679026442&width=600&height=400&crop=center"></img>
+              <img src="https://cdn.shopify.com/s/files/1/0673/5645/9319/articles/tennis-shoes-womens_2.webp?v=1679026442&width=600&height=400&crop=center"></img>
             </div>
             <div className="flex gap-2 mt-4 text-sm font-normal text-gray-600">
               <p>Quy Phuc </p>
@@ -171,14 +189,17 @@ export default function indexsummer({ sanPhamsTraVe }) {
             </div>
             <div className="mt-2 text-gray-600">
               <p>
-              If you purchase an independently reviewed product or service through a link on our website...
+                If you purchase an independently reviewed product or service
+                through a link on our website...
               </p>
             </div>
           </div>
           <div>
             <div>
-
-            <img  className="card-image bg-gray-300 aspect-[3/2]" src="https://cdn.shopify.com/s/files/1/0673/5645/9319/articles/outfits-for-kids_2.webp?v=1679026427&width=600&height=491&crop=center"></img>
+              <img
+                className="card-image bg-gray-300 aspect-[3/2]"
+                src="https://cdn.shopify.com/s/files/1/0673/5645/9319/articles/outfits-for-kids_2.webp?v=1679026427&width=600&height=491&crop=center"
+              ></img>
             </div>
             <div className="flex gap-2 mt-4 text-sm font-normal text-gray-600">
               <p>Demo Owen v1 Admin</p>
@@ -190,12 +211,16 @@ export default function indexsummer({ sanPhamsTraVe }) {
             </div>
             <div className="mt-2 text-gray-600">
               <p>
-              August means it’s time to start thinking about back-to-school shopping. To help you ...
+                August means its time to start thinking about back-to-school
+                shopping. To help you ...
               </p>
             </div>
           </div>
           <div>
-            <img className="card-image bg-gray-300 aspect-[3/2]" src="https://cdn.shopify.com/s/files/1/0673/5645/9319/articles/blog-img-3_2.webp?v=1679026401&width=600&height=344&crop=center"></img>
+            <img
+              className="card-image bg-gray-300 aspect-[3/2]"
+              src="https://cdn.shopify.com/s/files/1/0673/5645/9319/articles/blog-img-3_2.webp?v=1679026401&width=600&height=344&crop=center"
+            ></img>
             <div className="flex gap-2 mt-4 text-sm font-normal text-gray-600">
               <p>Quy Phuc</p>
               <p>|</p>
@@ -206,13 +231,14 @@ export default function indexsummer({ sanPhamsTraVe }) {
             </div>
             <div className="mt-2 text-gray-600">
               <p>
-              Our German SportsShoes ambassador Elli is running the Berlin Marathon this year. We met up...
+                Our German SportsShoes ambassador Elli is running the Berlin
+                Marathon this year. We met up...
               </p>
             </div>
           </div>
         </div>
       </div>
-      <div className="m-16 flex gap-8 justify-between">
+      <div className="p-16 flex gap-8 justify-between container mx-auto w-full">
         <div>
           <img src="https://demo.shopifyhydrogen.io/sanity/34c020b8b81440c8c7924b519a6dc53e3f138ed1-137x22.webp"></img>
         </div>

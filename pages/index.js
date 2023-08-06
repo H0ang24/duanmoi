@@ -11,7 +11,7 @@ export default function Home({ sanPhamsTraVe }) {
   return (
 
     <Layout >
-      <div className="m-10">
+      <div className="m-10 container mx-auto w-full">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={30}
@@ -30,6 +30,7 @@ export default function Home({ sanPhamsTraVe }) {
               )
             })}
           </div>
+          
         </Swiper>
       </div>
     </Layout>
