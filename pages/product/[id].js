@@ -27,7 +27,6 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
       sanPhamTraVe.product.variants[0].price) -
     sanPhamTraVe.product.variants[0].price;
 
-  const [addtobag, setaddtobag] = useState(false);
   const themVaoGioHang = (sanPhamTraVe) => {
     const gioHang = localStorage.getItem("giohang");
     //Trong trường hợp chưa có giỏ hàng
