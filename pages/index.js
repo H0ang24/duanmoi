@@ -30,7 +30,6 @@ export default function Home({ sanPhamsTraVe }) {
               )
             })}
           </div>
-          
         </Swiper>
       </div>
     </Layout>
