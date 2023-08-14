@@ -3,7 +3,7 @@ import ShopBest from "./ShopBest";
 export default function Cart({ setGioHangHienThi, trangThai }) {
   return (
     trangThai && (
-      <div className="h-screen w-[470px] bg-white border-black top-0 right-0 fixed z-10 px-10 py-6">
+      <div className="h-screen w-[470px] bg-white border-black top-0 right-0 fixed z-10 px-10 py-6 overflow-y-auto">
         <div className="flex justify-between items-center text-[20px] text-black">
           <div className="font-bold">Cart</div>
           <button
@@ -25,8 +25,8 @@ export default function Cart({ setGioHangHienThi, trangThai }) {
           <div className="text-black mt-16 mb-10">
             <p className="font-bold">Shop Best Sellers</p>
           </div>
-          <div >
-           <ShopBest></ShopBest>
+          <div>
+            <ShopBest></ShopBest>
           </div>
         </div>
       </div>

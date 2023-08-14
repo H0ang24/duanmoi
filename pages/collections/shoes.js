@@ -87,42 +87,42 @@ export default function shoes ({ sanPhamsTraVe }) {
                 <div className="flex flex-col gap-3 ">
                   <div className="flex justify-between">
                     <div className="flex items-center gap-2">
-                      <input className="border-black border w-[20px] h-[20px]"></input>
+                      <input className="border-black border w-[20px] h-[20px]" type="checkbox"></input>
                       <p>Adidas</p>
                     </div>
                     <p>5</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex items-center gap-2">
-                      <input className="border-black border w-[20px] h-[20px]"></input>
+                      <input className="border-black border w-[20px] h-[20px]" type="checkbox"></input>
                       <p>Asics</p>
                     </div>
                     <p>1</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex items-center gap-2">
-                      <input className="border-black border w-[20px] h-[20px]"></input>
+                      <input className="border-black border w-[20px] h-[20px]" type="checkbox"></input>
                       <p>New Balance</p>
                     </div>
                     <p>3</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex items-center gap-2">
-                      <input className="border-black border w-[20px] h-[20px]"></input>
+                      <input className="border-black border w-[20px] h-[20px]" type="checkbox"></input>
                       <p>Nike</p>
                     </div>
                     <p>4</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex items-center gap-2">
-                      <input className="border-black border w-[20px] h-[20px]"></input>
+                      <input className="border-black border w-[20px] h-[20px]" type="checkbox"></input>
                       <p>Puma</p>
                     </div>
                     <p>1</p>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex items-center gap-2">
-                      <input className="border-black border w-[20px] h-[20px]"></input>
+                      <input className="border-black border w-[20px] h-[20px]" type="checkbox"></input>
                       <p>Reebok</p>
                     </div>
                     <p>2</p>

@@ -14,7 +14,7 @@ import "swiper/css";
 export default function Home({ sanPhamsTraVe }) {
   return (
     <Layout>
-      <div className="px-10">
+      <div className="px-10 mt-10 container mx-auto w-full">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
@@ -33,7 +33,7 @@ export default function Home({ sanPhamsTraVe }) {
           
         </Swiper>
       </div>
-      <div className="m-10 container mx-auto w-full">
+      <div className="px-10 m-10 container mx-auto w-full">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={30}
