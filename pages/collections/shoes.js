@@ -2,17 +2,10 @@ import React from "react";
 import Layout from "../../components/Layout";
 import Product from "../../components/Product";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
-export default function ({sanPhamsTraVe}) {
+export default function shoes ({ sanPhamsTraVe }) {
   return (
     <Layout>
       <div className="px-10 pb-36 mt-16">
@@ -176,9 +169,9 @@ export default function ({sanPhamsTraVe}) {
               <div className="m-10 container mx-auto w-full">
              
                   <div className=" p-10 container  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {sanPhamsTraVe.map((product) => {
+                    {sanPhamsTraVe.map((product ,index) => {
                       return (
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                           <Product product={product}></Product>
                         </SwiperSlide>
                       );
