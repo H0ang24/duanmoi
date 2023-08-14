@@ -16,7 +16,7 @@ export default function Cart({ setGioHangHienThi, trangThai }) {
           </button>
         </div>
         <div className="text-black my-5">
-          Looks like you haven’t added anything yet, let’s get you started!
+          Looks like you havent added anything yet, lets get you started!
         </div>
         <button className="bg-black rounded font-medium text-center py-3 px-6 bg-primary text-contrast w-auto">
           Continue shopping

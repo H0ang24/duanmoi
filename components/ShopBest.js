@@ -36,7 +36,7 @@ export default function ShopBest() {
             <p className="text-black">(7)</p>
           </div>
           <div className="font-semibold min-h-[48px] text-black">
-            Men's New Balance Two WXY Basketball Shoes
+            Mens New Balance Two WXY Basketball Shoes
           </div>
           <div className="flex gap-3">
             <del className="text-gray-500 font-bold">$130</del>
@@ -78,7 +78,7 @@ export default function ShopBest() {
             <p className="text-black">(7)</p>
           </div>
           <div className="font-semibold min-h-[48px] text-black">
-            Men's New Balance Two WXY Basketball Shoes
+            Mens New Balance Two WXY Basketball Shoes
           </div>
           <div className="flex gap-3">
             <del className="text-gray-500 font-bold">$130</del>
@@ -120,7 +120,7 @@ export default function ShopBest() {
             <p className="text-black">(7)</p>
           </div>
           <div className="font-semibold min-h-[48px] text-black">
-            Men's New Balance Two WXY Basketball Shoes
+            Mens New Balance Two WXY Basketball Shoes
           </div>
           <div className="flex gap-3">
             <del className="text-gray-500 font-bold">$130</del>
@@ -162,7 +162,7 @@ export default function ShopBest() {
             <p className="text-black">(7)</p>
           </div>
           <div className="font-semibold min-h-[48px] text-black">
-            Men's New Balance Two WXY Basketball Shoes
+            Mens New Balance Two WXY Basketball Shoes
           </div>
           <div className="flex gap-3">
             <del className="text-gray-500 font-bold">$130</del>
