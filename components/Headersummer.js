@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
@@ -7,9 +7,10 @@ import { FiShoppingCart } from "react-icons/fi";
 import { BsFillPauseFill, BsArrowLeftRight } from "react-icons/bs";
 import { useRef, useEffect } from "react";
 import Link from "next/link";
+import Cart from "./Cart";
 export default function Headersummer() {
+  const [gioHangHienThi, setGioHangHienThi] = useState(false);
   const vidRef = useRef();
-
   useEffect(() => {
     vidRef.current.play();
   }, []);
@@ -51,9 +52,9 @@ export default function Headersummer() {
 
             <div className="flex gap-4 text-white">
               <AiOutlineSearch className="text-[28px]"></AiOutlineSearch>
-              <div className="flex flex-col items-center ">
+              <Link href='/account/login' className="flex flex-col items-center ">
                 <BiUser className="text-[28px] "></BiUser>
-              </div>
+              </Link>
               <div className="flex flex-col items-center ">
                 <BsArrowLeftRight className="text-[28px]"></BsArrowLeftRight>
               </div>
@@ -61,8 +62,19 @@ export default function Headersummer() {
                 <AiOutlineHeart className="text-[28px]"></AiOutlineHeart>
               </div>
               <div className="flex flex-col items-center relative ">
-                <FiShoppingCart className="text-[28px]"></FiShoppingCart>
-
+                <div>
+                  <button
+                    onClick={() => {
+                      setGioHangHienThi(!gioHangHienThi);
+                    }}
+                  >
+                    <FiShoppingCart className="text-[28px]"></FiShoppingCart>
+                  </button>
+                  <Cart
+                    trangThai={gioHangHienThi}
+                    setGioHangHienThi={setGioHangHienThi}
+                  ></Cart>
+                </div>
                 <div className="bg-[#EF4444] absolute w-4 h-4 flex items-center justify-center right-[-5px] rounded-full text-[12px]">
                   0
                 </div>

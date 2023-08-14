@@ -13,6 +13,7 @@ import {
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
+import Link from "next/link";
 export default function indexsummer({ sanPhamsTraVe }) {
   return (
     <>
@@ -30,9 +31,9 @@ export default function indexsummer({ sanPhamsTraVe }) {
             <p className="whitespace-pre-wrap text-2xl lg:text-4xl font-bold text-white ">
               MOUNTAIN BIKE <br></br> EXTREME DRIVING
             </p>
-            <button className="inline-block font-semibold border-b text-white  border-white pb-1 mt-5">
+            <Link href='/collections/shoes' className="inline-block font-semibold border-b text-white  border-white pb-1 mt-5">
               SHOP NOW
-            </button>
+            </Link>
           </div>
         </div>
         <div className="relative">
@@ -48,9 +49,9 @@ export default function indexsummer({ sanPhamsTraVe }) {
               <p className="whitespace-pre-wrap text-2xl lg:text-4xl font-bold text-white ">
                 BIKES FOR<br></br> PROFESSIONAL
               </p>
-              <button className="inline-block font-semibold border-b text-white  border-white pb-1 mt-5">
+              <Link href='/collections/shoes' className="inline-block font-semibold border-b text-white  border-white pb-1 mt-5">
                 SHOP NOW
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -68,9 +69,9 @@ export default function indexsummer({ sanPhamsTraVe }) {
                 LONG RIDE<br></br>ON A ROAD BIKE
               </p>
               <div>
-                <button className="inline-block font-semibold border-b text-white border-white pb-1 mt-5">
+                <Link href='/collections/shoes' className="inline-block font-semibold border-b text-white border-white pb-1 mt-5">
                   SHOP NOW
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -119,8 +120,11 @@ export default function indexsummer({ sanPhamsTraVe }) {
           </button>
         </div>
       </div>
-      <div className="container p-10  mx-auto w-full">
-        <img src="https://demo.shopifyhydrogen.io/sanity/bfab0e86c94a9e183c25ca3e6d5d93a0bb9b0129-1920x720.webp?width=600&height=225&crop=center"></img>
+      <div className="container p-10  mx-auto w-full ">
+        <img
+          className="rounded-md"
+          src="https://demo.shopifyhydrogen.io/sanity/bfab0e86c94a9e183c25ca3e6d5d93a0bb9b0129-1920x720.webp?width=600&height=225&crop=center"
+        ></img>
       </div>
       <div className="p-10 container mx-auto w-full">
         <div className="flex items-center justify-between">

@@ -96,17 +96,31 @@ export default function id({ sanPhamTraVe, sanPhamsTraVe }) {
               </p>
             </div>
             <div className="h-[160px]">
-              <div>Color:</div>
-              <div>
-                <div className="aspect-[1/2] w-[110px]">
+              <div className="flex gap-2 pb-3">
+              <div className="font-bold">Color:</div>
+              <div className="text-gray-500">Red</div>
+              </div>
+              <div className="flex gap-4">
+                <div className="aspect-[2/1] w-[100px] border-[1px] border-black ">
                   <img src={sanPhamTraVe.product.images[0].src}></img>
                 </div>
-                <div>
-                  <img></img>
+                <div className="aspect-[2/1] w-[100px] border-[1px] border-black ">
+                  <img src={sanPhamTraVe.product.images[0].src}></img>
                 </div>
-                <div>
-                  <img></img>
+                <div className="aspect-[2/1] w-[100px] border-[1px] border-black ">
+                  <img src={sanPhamTraVe.product.images[0].src}></img>
                 </div>
+              </div>
+            </div>
+            <div>
+              <div className="flex justify-between font-bold">
+              <div>Size</div>
+              <div className="border-b-2 border-black pb-[2px]">SIZE GUIDE</div>
+              </div>
+              <div className="flex gap-3">
+                <button className="border-[1px] border-black aspect-[2/1] w-[30px]">M6</button>
+                <button >M7</button>
+                <button >M8</button>
               </div>
             </div>
 
